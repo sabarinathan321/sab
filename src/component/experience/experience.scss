@@ -1,0 +1,121 @@
+@import '../../global.scss';
+
+.experience {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease;
+    position: relative;
+
+    h1 {
+        transition: all 1s ease;
+        overflow: hidden;
+    }
+
+    .slider {
+        width: 100%;
+        left: 0;
+        display: flex;
+        position: relative;
+
+        .container {
+            width: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: $sliderColor;
+            border-radius: 20px;
+
+            .parent {
+                // height: 85%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                .title {
+                    font-weight: 500;
+                    font-size: 21px;
+                    overflow: hidden;
+                    margin-top: 25px;
+                }
+
+                .item {
+                    height: 80%;
+                    height: 450px;
+                    display: flex;
+                    flex-direction: row;
+                    overflow: hidden;
+
+                    .left {
+                        flex: 5;
+                        display: flex;
+                        padding-left: 10px;
+                        justify-content: center;
+                        align-items: left;
+                        flex-direction: column;
+
+                        .imgContainer {
+                            // background-color: rgb(211, 227, 233);
+                            height: 40px;
+                            width: 40px;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transform: rotate(15deg);
+
+                            img {
+                                height: 30px;
+                                width: 30px;
+                            }
+                        }
+
+                        // .title {
+                        //     font-weight: 500;
+                        //     font-size: 21px;
+                        //     overflow: hidden;
+                        // }
+                        
+                        p {
+                            text-align: left;
+                        }
+                    }
+
+                    .right {
+                        height: inherit;
+                        width: inherit;
+                        flex: 7;
+                        overflow: hidden;
+                        cursor: pointer;
+                        // background-color: green;
+
+                        .imgClass {
+                            height: 100%;
+                            width: 100%;
+                            transition: all 0.5s ease-out;
+                            // transform: rotate(5deg);
+                            object-fit: contain;
+
+                            &:hover {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+        background-color: white;
+
+        h1 {
+            color: $mainColor;
+        }
+    }
+}

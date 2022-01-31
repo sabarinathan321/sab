@@ -1,0 +1,11 @@
+$mainColor: rgb(0, 217, 255);
+$sliderColor: rgb(206, 248, 255);
+// $mainColor: rgb(97, 193, 228);
+
+$maxWidth: 768px;
+
+@mixin reponsive {
+    @media (max-width: #{$maxWidth}) {
+        @content
+    }
+}

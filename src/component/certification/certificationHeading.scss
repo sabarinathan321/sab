@@ -1,0 +1,24 @@
+@import '../../global.scss';
+
+.certificationHeading {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 45px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &.active {
+        background-color: $mainColor;
+        color: white;
+
+        &:hover {
+            background-color: $mainColor;
+        }
+    }
+
+    &:hover {
+        background-color: $sliderColor;
+    }
+}
